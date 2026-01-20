@@ -17,6 +17,18 @@
                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
 
+                <?php
+                session_start();
+                if(isset($_SESSION['user'])){
+                    echo '<li class="nav-item">Hello ' + $_SESSION["user"] + "!";
+                }else{
+                    echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
+
+                }
+                ?>
+
+
+
 
 
 
